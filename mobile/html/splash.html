@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="mobile-web-app-capable" content="yes">
+    <meta name="robots" content="index, follow" />
+
+    <meta name="subject" content="PFS 미디어플랫폼제작 예산관리시스템">
+    <meta name="author" content="하이블럭스">
+    <meta name="title" content="미디어플랫폼제작 예산관리시스템" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="넷플릭스, 하이블럭스, 영화, 영화제작, 영화제작 예산관리" />
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="미디어플랫폼제작 예산관리시스템" />
+    
+    <title>로그인 | PFS 미디어플랫폼제작 예산관리시스템</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="" />
+    <link rel="apple-touch-icon" href="../resources/img/common/ico_app.png" >
+
+	<link rel="stylesheet" href="../resources/css/ui.base.css">
+	<script src="../resources/js/lib/jquery-3.2.1.min.js"></script>
+	<script src="../resources/js/ui.global.js"></script>
+	<script src="../resources/js/ui.common.js"></script>
+
+    <style>
+    </style>
+</head>
+<body class="type-splash">
+    <div class="base-wrap">
+        <header class="base-header" 
+        data-id="1" 
+        data-type="none" 
+        ></header>
+        <!-- content -->
+        <main class="base-body">
+            <div class="slogan">
+                <h1>PFS</h1>
+                <p>
+                    <span>미디어플랫폼제작 예산관리시스템</span>
+                </p>
+            </div>
+
+            <div class="slogan-img">
+                <img src="../resources/img/splash.svg" alt="PFS">
+            </div>
+
+            <div class="loading">
+                <div class="bar" style="width:50%">
+                    <span class="a11y-hidden">50%</span>
+                </div>
+            </div>
+            <div class="copyright">
+                COPYRIGHT©2021 HIBLOCKS. ALL RIGHTS RESERVED.
+            </div>
+            
+        </main>
+        <!-- //content -->
+    </div>
+
+    <script> 
+        ;(function($, win, doc, undefined) {
+            $(doc).ready(function() {
+               
+                //기본 실행
+                $plugins.common.init();
+                $('.ui-modal-btn').off('click.modal').on('click.modal', function(e){
+                    var $btn = $(this);
+                    
+                    $plugins.uiModalOpen({ 
+                        id: $btn.attr('data-id'), 
+                        src: $btn.attr('data-src') === undefined ? false : $btn.attr('data-src'), 
+                        ps: $btn.attr('data-ps') === undefined ? 'center' : $btn.attr('data-ps'), 
+                      
+                        closeCallback: function(v) { 
+                            console.log('close callback', v); 
+                        },
+                        callback: function(v) { 
+                            console.log('callback', v); 
+                        }
+                    });
+                })
+            });
+        })(jQuery, window, document);
+    </script>
+    
+</body>
+</html>
