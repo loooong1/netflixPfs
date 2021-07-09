@@ -283,6 +283,18 @@
 					// }
 					break;
 
+				case 'list':
+					//전표리스트
+					$html.addClass('type-list');
+					$tit.html(tit);
+					$html.addClass('nav-normal');
+					// if (nav === 'normal') {
+					// 	$html.addClass('nav-normal');
+					// } else if (nav === 'site') {
+					// 	$html.addClass('nav-place');
+					// }
+					break;
+
 				case 'contalk':
 					//뒤로가기,신문고,알림
 					$html.addClass('type-contalk');

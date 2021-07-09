@@ -153,13 +153,29 @@
 	display: none !important;
 }
 
+/* header */
+.type-list .util-camera,
+.type-list .util-alarm,
+.type-list .util-contalk,
+.type-list .util-qr,
+.type-list .util-list,
+.base-header-wrap .page-title .sum-box {
+	display: none !important;
+}
+
 .util button {
 	width: 4rem;
 	height: 4rem;
 	border-radius: 0.6rem;
 	border: 1px solid #ccc;
 }
-.util button+button,
+[class*='util']  button {
+	width: 4rem;
+	height: 4rem;
+	border-radius: 0.6rem;
+	border: 1px solid #ccc;
+}
+[class*='util'] button+button,
 .util-contalk button+button,
 .util-alarm button+button {
 	margin-left: 0.5rem;
@@ -213,8 +229,12 @@
 
 .base-header-wrap .btn-back {
 	position: absolute;
-	left: 1rem;
-	top: 1.25rem;
+	left: 1.8rem;
+	top: 0.75rem;
+	width: 4rem;
+    height: 4rem;
+    border-radius: 0.6rem;
+    border: 1px solid #ccc;
 }
 
 .base-header-wrap .btn-menu {
@@ -223,12 +243,13 @@
 	top: 1.25rem;
 }
 
+.base-header-wrap [class*='util'],
 .base-header-wrap .util-qr,
 .base-header-wrap .util-alarm,
 .base-header-wrap .util-contalk,
 .base-header-wrap .util {
 	position: absolute;
-	right: 1rem;
+	right: 1.8rem;
 	top: 0.75rem;
 	display: flex;
 	justify-content: flex-end;
@@ -1292,6 +1313,8 @@ a.btn-base {
 
 .type-ts .form-item {
 	align-items: center;
+	border-radius: 0.6rem;
+    box-shadow: 0px 6px 15px rgb(0 0 0 / 10%);
 }
 
 .form-helper {
@@ -2133,7 +2156,7 @@ a.ui-acco-btn:after {
 	position: relative;
 	width: 100%;
 	padding: 2rem 1.7rem;
-	background: #F7F7F7;
+	background: #Fff;
 }
 
 .talk-date {
@@ -2339,7 +2362,7 @@ a.ui-acco-btn:after {
 
 .talk-search::after {
 	content: "";
-	display: block;
+	display: none;
 	width: calc(100% + 2rem);
 	position: absolute;
 	top: 0;
@@ -2372,7 +2395,7 @@ a.ui-acco-btn:after {
 
 .talk-search-wrap.type-ts,
 .talk-search-wrap.type-pts {
-	padding: 0.9rem 0.5rem 1.3rem 2rem;
+	padding: 0.9rem 2.0rem 1.3rem 2rem;
 }
 
 .talk-latest-wrap+.talk-search-wrap,
@@ -2389,9 +2412,10 @@ a.ui-acco-btn:after {
 }
 
 .talk-search .inp-base {
-	border: 1px solid #ddd;
-	padding: 0 1rem 0 4.5rem;
+	border: 1px solid #008F84;
+	padding: 0 1rem 0 1rem;
 	height: 4.5rem;
+	border-radius: 0.6rem 0 0 0.6rem;
 }
 
 .type-pts {
@@ -2440,10 +2464,24 @@ a.ui-acco-btn:after {
 	height: 3rem;
 	background: url(../img/icon_filter_b.svg) no-repeat 50% 50% / 1.8rem;
 }
+.btn-reflash {
+    width: 4.6rem;
+    height: 100%;
+    border-radius: 0 0.6rem 0.6rem 0;
+    background: #1e9c92 url(../img/icon_reflash.svg) no-repeat 50% 50% / 2.0rem;
+}
+
+.btn-receipt {
+	width: 2.4rem;
+	height: 2.4rem;
+	background: url(../img/icon_receipt.svg) no-repeat 50% 50% / 1.8rem;
+}
 
 .type-ts .inp-wrap {
 	flex: 1 auto;
 	position: relative;
+	justify-content: space-between;
+    display: flex;
 }
 
 .type-ts .btn-search {
@@ -2455,7 +2493,7 @@ a.ui-acco-btn:after {
 
 .type-ts .inp-wrap::before {
 	content: "";
-	display: block;
+	display: none;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -2557,17 +2595,19 @@ a.ui-acco-btn:after {
 .talk-list .item {
 	width: 100%;
 	position: relative;
-	margin: 1rem 0;
+	margin: 0rem 0;
 	display: block;
+	border-radius: 1rem;
+    box-shadow: 0px 3px 15px rgb(0 0 0 / 10%);
 }
 
 .talk-list .item+.item {
-	margin-top: 3rem;
+	margin-top: 1rem;
 }
 
 .talk-list .item+.item::before {
 	content: "";
-	display: block;
+	display: none;
 	position: absolute;
 	top: -1.5rem;
 	left: 0;
@@ -2585,8 +2625,8 @@ a.ui-acco-btn:after {
 	background: #888;
 	box-shadow: inset 5px 0 3px rgba(0, 0, 0, 0.2);
 	color: #fff;
-	border-top-right-radius: 0.4rem;
-	border-bottom-right-radius: 0.4rem;
+	border-top-right-radius: 1.4rem;
+	border-bottom-right-radius: 1.4rem;
 }
 .talk-list.type-newest{
 	margin-bottom:2.5rem;
@@ -2599,10 +2639,12 @@ a.ui-acco-btn:after {
 	position: relative;
 	z-index: 1;
 	width: 100%;
-	background: #F7F7F7;
+	background: #fff;
+	padding: 1.2rem 2rem;
 	height: 100%;
 	display: flex;
-	align-items: center;
+	align-items: center;	
+	border-radius: 1.0rem;
 }
 
 .talk-list .photo [class*="flag-"] {
@@ -2661,7 +2703,7 @@ a.ui-acco-btn:after {
 .talk-list .info {
 	flex: 1 auto;
 	padding: .8rem 0;
-	max-width: calc(100% - 14.5rem);
+	width: calc(100% - 11.4rem);
 }
 
 .talk-list .talk {
@@ -2669,9 +2711,17 @@ a.ui-acco-btn:after {
 	margin-left: 0.5rem;
 }
 
-.talk-list .date {
-	flex: 0 5rem;
+.talk-list .price {
+	flex: 0 9rem;
 	margin-left: 0.5rem;
+	/* min-width: 8rem; */
+	font-size: 1.8rem;
+	text-align: right;
+	color: #008F84;
+}
+.talk-list .receipt-view {
+	/* flex: 0 5rem; */
+	margin-left: 1.0rem;
 	font-size: 1.2rem;
 	color: #777;
 }
@@ -2685,7 +2735,23 @@ a.ui-acco-btn:after {
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
-
+.talk-list .tit .status {
+	font-size: 1.2rem;
+	font-weight: 700;
+	display: inline-block;
+	padding: 0.4rem 1.0rem;
+	border-radius: 	1.2rem;
+	background-color: #ddd;
+	color: #fff;
+	margin-right: 0.8rem;
+	vertical-align: top;
+}
+.talk-list .tit .status.type1 {
+	background-color: #FFD240;
+}
+.talk-list .tit .status.type2 {
+	background-color: #569EF1;
+}
 .talk-list .person {
 	font-size: 1.6rem;
 	font-weight: 500;
@@ -2695,10 +2761,15 @@ a.ui-acco-btn:after {
 	font-size: 1.3rem;
 	font-weight: 500;
 	color: #999;
+	padding-top: 0.6rem;
+	width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .talk-list .opt em {
-	color: #2584B4
+	/* color: #2584B4 */
 }
 
 .talk-list .state {
@@ -2708,7 +2779,7 @@ a.ui-acco-btn:after {
 }
 
 .talk-list .opt>* {
-	display: inline-block;
+	/* display: inline-block; */
 	position: relative;
 }
 
@@ -2775,6 +2846,24 @@ a.ui-acco-btn:after {
 .filter-item+.filter-item {
 	border-top: 1px solid #F5F5F5;
 }
+
+.btn-bottom-wrap {
+	width: 100%;
+	height: 8.0rem;
+	background: #fff;
+	z-index: 900;
+}
+
+.btn-bottom-wrap {
+	display: flex;
+	align-items: center;
+	padding: 0 2rem;
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
+}
+.btn-bottom-wrap .btn-base {
+	width: 100%;
+}
+
 
 .nav-gnb {
 	width: 100%;
@@ -4242,7 +4331,7 @@ dl.list-base > div,
 	padding: 2.5rem 0;
 }
 
-.alarm-none {
+.data-none {
 	width: 100%;
 	text-align: center;
 	font-size: 1.5rem;
@@ -4250,15 +4339,15 @@ dl.list-base > div,
 	padding: 3rem 0;
 }
 
-.alarm-none::before {
+.data-none::before {
 	content: "";
 	display: inline-block;
-	width: 7rem;
-	height: 9rem;
-	background: url(../img/bell-off-outline.svg) no-repeat 50% 50% / 7rem;
+	width: 20rem;
+	height: 24rem;
+	background: url(../img/icon_nodata.svg) no-repeat 50% 50% / 20rem;
 }
 
-.alarm-none p {
+.data-none p {
 	width: 100%;
 }
 
@@ -4978,8 +5067,11 @@ dl.list-base > div,
 	margin-bottom:.8rem;
 }
 .tbl-header .total em{
-	color:#E7565F;
+	font-weight: 400;
+}
+.tbl-header .total-price em{
 	font-weight: 700;
+	font-size: 1.8rem;
 }
 .inp-select.small{
 	border:0;
