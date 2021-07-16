@@ -265,6 +265,18 @@
 					$tit.html(tit);
 					break;
 
+				case 'camera':
+					//뒤로가기
+					$html.addClass('type-camera');
+					$tit.html(tit);
+					break;
+
+					case 'chit':
+						//뒤로가기
+						$html.addClass('type-chit');
+						$tit.html(tit);
+						break;
+
 				case 'alarm':
 					//뒤로가기,알림설정
 					$html.addClass('type-alarm');

@@ -33,19 +33,19 @@
     <style>
     </style>
 </head>
-<body class="type-list">
+<body>
     <div class="base-wrap">
         <header class="base-header" 
         data-id="1" 
-        data-type="list" 
+        data-type="chit" 
         data-title="보건교사 안은영"
         ></header>
         <!-- content -->
         <main class="base-body">
-            <h2 class="a11y-hidden">talk</h2>
+            <h2 class="a11y-hidden">chit</h2>
             
-            <div class="ui-sp talk-search type-c">
-                <div class="talk-search-wrap type-ts">
+            <div class="ui-sp chit-search type-c">
+                <div class="chit-search-wrap type-ts">
                     <div class="form-item">
                         <div class="inp-wrap">
                             <input type="text" class="inp-base" value="" placeholder="내용을 입력하세요.">
@@ -57,8 +57,8 @@
                 </div>
             </div>
 
-            <!-- talk area -->
-            <div class="section-talk ui-height" data-type='fix'>
+            <!-- chit area -->
+            <div class="section-chit ui-height" data-type='fix'>
                 <div class="tbl-header">
                     <div class="total">
                         <em>총 2310건</em>
@@ -68,7 +68,7 @@
                         <em>1,533,900원</em>
                     </div>
                 </div>
-                <div class="talk-list ">
+                <div class="chit-list ">
                     <div class="data-none" style="*display: none;">
                         <p>검색결과가 없습니다.</p>
                     </div>
@@ -246,15 +246,15 @@
                     </ul>
                 </div>
             </div>
-            <!-- //talk area -->
+            <!-- //chit area -->
         </main>
         <!-- //content -->
 
-        <nav class="ui-sp btn-bottom-wrap">
+        <div class="ui-sp btn-bottom-wrap">
             <button type="button" class="btn-base large primary">
                 <span>전표등록</span>
             </button>
-        </nav>
+        </div>
 
         <footer class="base-footer"></footer>
     </div>
@@ -267,11 +267,11 @@
                 $plugins.common.init();
                 
                 $('#searchOpen').on('click', function(){
-                    $('body').addClass('talk-search-open');
+                    $('body').addClass('chit-search-open');
                     $plugins.common.contentHeight();
                 });
                 $('#searchClose').on('click', function(){
-                    $('body').removeClass('talk-search-open');
+                    $('body').removeClass('chit-search-open');
                     $plugins.common.contentHeight();
                 });
 
