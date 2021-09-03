@@ -4245,14 +4245,12 @@ dl.list-base > div,
 .movie-list>li {
 	flex: 1 50%;
 	max-width: calc(50% - 2.2rem);
-	min-width: calc(50% - 2.2rem);
-	
+	min-width: calc(50% - 2.2rem);	
 	background: #fff;
 	border-radius: 0.8rem;
 	margin: 0 0.8rem 2.0rem;
 	position: relative;
-	min-height:16rem;
-	max-height:auto;
+	/* min-height:16rem; */
 	text-align: center;
 	box-shadow:0 .6rem .6rem rgba(0, 0, 0, .1);
 }
@@ -4316,6 +4314,7 @@ dl.list-base > div,
 .camera-list>li .inp-check label {
 	padding: 0;
 	position: relative;
+	display: block;
 }
 .camera-list>li a {
 	display: block;
